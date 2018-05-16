@@ -1,0 +1,6 @@
+@mixin margentop ($top) {
+	-moz-top: $top;
+	-webkit-top: $top;
+	-ms-top: $top;
+	top: $top;
+}

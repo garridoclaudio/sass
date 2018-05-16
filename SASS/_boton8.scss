@@ -1,0 +1,33 @@
+.sit { 
+	grid-area: sit;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 9;
+	grid-row-end: 10;
+	@extend %borde;
+	text-align: center;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-family: $fuenteBoton;
+	font-size: $fuenteTamanioboton;
+	background-color: #c69;
+	color: $fuenteColor;
+	position: relative;
+}
+.expsit {
+	display: none;
+	position: absolute;
+	@include margentop(-500px);
+	left: 450px;
+	width: 600px;
+	text-align: left;
+	color: $colorFuenteExp;
+	font-family: $fuenteExp;
+	font-size: $fuenteExpTamanio;
+}
+.sit:hover .expsit {
+	display: block;
+ }

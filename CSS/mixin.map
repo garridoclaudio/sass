@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/mixin.css",
+	"sources": [
+		"../sass/mixin.scss"
+	],
+	"sourcesContent": [
+		"@mixin margentop ($top) {\r\n\t-moz-top: $top;\r\n\t-webkit-top: $top;\r\n\t-ms-top: $top;\r\n\ttop: $top;\r\n}"
+	],
+	"mappings": "",
+	"names": []
+}

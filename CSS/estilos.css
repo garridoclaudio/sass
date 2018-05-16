@@ -1,0 +1,426 @@
+/* Desafio SASS*/
+/* Sintaxis SASSY: archivos de extension .scss;*/
+/* Uso programa Scout-app (https://sass-lang.com) */
+/* Partials + Import */
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_box.scss */
+.box {
+  display: grid;
+  grid-template-columns: 300px 400px 900px 300px;
+  grid-template-rows: 200px repeat(8, 100px) 100px;
+  grid-area: "header header header header" "a1 q exp a2" "a1 v exp a2" "a1 p exp a2" "a1 i exp a2" "a1 n exp a2" "a1 e exp a2" "a1 m exp a2" "a1 sit exp a2" "foot foot foot foot";
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_exp.scss */
+.exp {
+  grid-area: exp;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 10;
+  border-style: solid;
+  border-color: #036;
+  text-align: center;
+  color: black;
+  padding: 10px;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_header.scss */
+.header {
+  grid-area: header;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: #FFFFFF;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_borde.scss */
+.q, .v, .p, .i, .n, .e, .m, .sit {
+  border-style: solid;
+  border-color: #036;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton1.scss */
+.q {
+  grid-area: q;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  background-color: #c69;
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* line 20, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton1.scss */
+.expq {
+  display: none;
+  position: absolute;
+  -moz-top: 5px;
+  -webkit-top: 5px;
+  -ms-top: 5px;
+  top: 5px;
+  left: 450px;
+  width: 600px;
+  text-align: left;
+  color: #6b717f;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+}
+
+/* line 31, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton1.scss */
+.q:hover .expq {
+  display: block;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton2.scss */
+.v {
+  grid-area: v;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  text-align: center;
+  color: black;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  background-color: #c69;
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* line 21, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton2.scss */
+.expv {
+  display: none;
+  position: absolute;
+  -moz-top: -50px;
+  -webkit-top: -50px;
+  -ms-top: -50px;
+  top: -50px;
+  left: 450px;
+  width: 600px;
+  text-align: left;
+  color: #6b717f;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+}
+
+/* line 32, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton2.scss */
+.v:hover .expv {
+  display: block;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton3.scss */
+.p {
+  grid-area: p;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  background-color: #c69;
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* line 20, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton3.scss */
+.expp {
+  display: none;
+  position: absolute;
+  -moz-top: -200px;
+  -webkit-top: -200px;
+  -ms-top: -200px;
+  top: -200px;
+  left: 450px;
+  width: 600px;
+  text-align: left;
+  color: #6b717f;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+}
+
+/* line 31, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton3.scss */
+.p:hover .expp {
+  display: block;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton4.scss */
+.i {
+  grid-area: i;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  background-color: #c69;
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* line 20, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton4.scss */
+.expi {
+  display: none;
+  position: absolute;
+  -moz-top: -200px;
+  -webkit-top: -200px;
+  -ms-top: -200px;
+  top: -200px;
+  left: 450px;
+  width: 600px;
+  text-align: left;
+  color: #6b717f;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+}
+
+/* line 31, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton4.scss */
+.i:hover .expi {
+  display: block;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton5.scss */
+.n {
+  grid-area: n;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  background-color: #c69;
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* line 20, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton5.scss */
+.expn {
+  display: none;
+  position: absolute;
+  -moz-top: -200px;
+  -webkit-top: -200px;
+  -ms-top: -200px;
+  top: -200px;
+  left: 450px;
+  width: 600px;
+  text-align: left;
+  color: #6b717f;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+}
+
+/* line 31, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton5.scss */
+.n:hover .expn {
+  display: block;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton6.scss */
+.e {
+  grid-area: e;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  background-color: #c69;
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* line 20, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton6.scss */
+.expe {
+  display: none;
+  position: absolute;
+  -moz-top: -450px;
+  -webkit-top: -450px;
+  -ms-top: -450px;
+  top: -450px;
+  left: 450px;
+  width: 600px;
+  text-align: left;
+  color: #6b717f;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+}
+
+/* line 31, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton6.scss */
+.e:hover .expe {
+  display: block;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton7.scss */
+.m {
+  grid-area: m;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  background-color: #c69;
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* line 20, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton7.scss */
+.expm {
+  display: none;
+  position: absolute;
+  -moz-top: -500px;
+  -webkit-top: -500px;
+  -ms-top: -500px;
+  top: -500px;
+  left: 450px;
+  width: 600px;
+  text-align: left;
+  color: #6b717f;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+}
+
+/* line 31, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton7.scss */
+.m:hover .expm {
+  display: block;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton8.scss */
+.sit {
+  grid-area: sit;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
+  background-color: #c69;
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* line 20, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton8.scss */
+.expsit {
+  display: none;
+  position: absolute;
+  -moz-top: -500px;
+  -webkit-top: -500px;
+  -ms-top: -500px;
+  top: -500px;
+  left: 450px;
+  width: 600px;
+  text-align: left;
+  color: #6b717f;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+}
+
+/* line 31, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_boton8.scss */
+.sit:hover .expsit {
+  display: block;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_a1.scss */
+.a1 {
+  grid-area: a1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 10;
+  background-color: #d2e1dd;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_a2.scss */
+.a2 {
+  grid-area: a2;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 10;
+  background-color: #d2e1dd;
+}
+
+/* line 1, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_footer.scss */
+.footer {
+  grid-area: foot;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 10;
+  grid-row-end: 11;
+  background-color: #6b717f;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 13, C:/Users/vizcondeacer/Desktop/CODERHOUSE/0000/DESAFIOS/SASS/sass/_footer.scss */
+.footer a {
+  text-decoration: none;
+}
+
+/* Nesting */
+/* Mixins*/
+
+/*# sourceMappingURL=../css/estilos.map */

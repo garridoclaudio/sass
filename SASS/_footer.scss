@@ -1,0 +1,15 @@
+.footer {
+	grid-area: foot;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 10;
+	grid-row-end: 11;
+	background-color: $colorFooter;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.footer a {
+	text-decoration: none;
+}

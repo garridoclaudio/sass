@@ -1,0 +1,13 @@
+.header {
+	grid-area: header;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background-color: $colorHeader;
+	padding: 20px 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}

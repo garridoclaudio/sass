@@ -1,0 +1,15 @@
+.box {
+	display: grid;
+	grid-template-columns: 300px 400px 900px 300px;
+	grid-template-rows: 200px repeat(8, 100px) 100px;
+	grid-area: "header header header header"
+			   "a1 q exp a2"
+			   "a1 v exp a2"
+			   "a1 p exp a2"
+			   "a1 i exp a2"
+			   "a1 n exp a2"
+			   "a1 e exp a2"
+			   "a1 m exp a2"
+			   "a1 sit exp a2"
+			   "foot foot foot foot";
+}

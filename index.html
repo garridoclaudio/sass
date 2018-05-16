@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- Desafío SASS -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta lang="es">
+		<title>** Desafío SASS **</title>
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet"> 
+		<link rel="stylesheet" href="CSS/estilos.css">
+	</head>
+	<body>
+		<div class="box">
+			<section class="header">
+				<img src="IMAGENES/color-1c4aab2b.png">
+			</section>
+			<!-- <ul class="menu"></ul> -->
+			<div class="q">¿Qué es Sass?
+				<section class="expq">
+					<p>- Sass es un pre-procesador de CSS.</p>
+					<p>- Como se auto-proclama, es “CSS con superpoderes”.</p>
+					<p>- Es un lenguaje, muy similar a CSS pero con ciertas ventajas. Nosotros vamos a escribir este lenguaje, y automáticamente se va a generar un archivo de CSS común, que es el que el navegador comprende.</p>
+				</section>	
+			</div>
+			<div class="v">Variables
+				<section class="expv">
+						<p>- Sass nos acerca mucho más a la idea de la
+						programación.
+						<p>- El primer concepto, completamente básico en
+						cualquier lenguaje, una variable.</p>
+						<p>- Desde el aspecto más técnico, una variable es
+						un espacio reservado en memoblablabla.</p>
+						<p>- Entonces, cuando queramos aplicar ese valor a
+						un elemento, utilizamos la variable.</p>
+						<p>- ¿Cuál es la ventaja de esto? Si necesito cambiar
+						un color o un tamaño de fuente que tengo 43
+						veces en mis estilos, simplemente cambio el
+						valor de la variable, y automágicamente se
+						actualiza en todo el sitio.</p>
+						<p>- Para declarar una variable en Sass vamos a
+						utilizar la siguiente sintaxis:</p>
+						<p>- $nombreVariable: valor;</p>
+						<p>- El signo pesos indica que es una variable, luego viene el nombre, colorPrincipal, fuente, tamaño, lo que queramos. Y por último, los dos puntos y
+						el valor, que puede ser cualquier valor válido de CSS.
+						<p>$colorPrincipal: #fa37bb;</p>
+						<p>$colorSecundario: #cc22f4;</p>
+						<p>$fuentePrincipal: ‘Roboto’, sans-serif;</p>
+						<p>$fuenteTitulos: ‘Pacific’, display;</p>
+						<p>h1 {
+						color: $colorPrincipal;
+						font-family: $fuenteTitulos;</p></p>
+				</section>
+			</div>
+			<div class="p">Partials
+				<section class="expp">
+					<p>- Los partials sirven para ordenar nuestro código.</p>
+					<p>Son magníficos.</p>
+					<p>- Me permiten separar mi código de Sass en
+					diferentes archivos, y así tener mis estilos de
+					header por un lado, los del footer por otro, y
+					todos los que quiera separar.</p>
+					<p>- Para eso, simplemente vamos a crear un
+					archivo nuevo por cada parte que queramos
+					separar.</p>
+					<p>- Ese archivo nuevo debe tener dos cosas:</p>
+					<p>- Extensión .scss</p>
+					<p>- Su nombre debe comenzar con un guión
+					bajo.</p>
+					<p>- Por ejemplo, creamos:</p>
+					<p>- _header.scss y _variables.scss</p>
+					<p>- Ahora bien, vamos a necesitar un archivo
+					“maestro” que junte todos estos partials.</p>
+					<p>- Ese archivo es el primero que creamos, que
+					puede ser styles.scss, estilos.scss, main.scss o
+					como le hayamos puesto.</p>
+					<p>- Y dentro de el vamos a utilizar la propiedad
+					@import, que, vale la aclaración, no es de Sass,
+					sino que es propia de CSS.</p>
+					<p>- Y esta propiedad va a ir acompañada del
+					nombre del archivo que queremos importar,
+					entre comillas y sin la extensión.</p>
+					<p>- Por ejemplo, para importar los dos partials que mensionamos hace unas diapositivas, haríamos lo siguiente:</p>
+					<p>@import ‘_variables’;</p>
+					<p>@import ‘_header’;</p>
+					<p>- Lo único que debemos tener en cuenta es el
+					orden de importación, por si un archivo utiliza
+					cosas de otro.</p>
+				</section>
+			</div>
+			<div class="i">Import
+				<section class="expi">
+					<p>- Ese archivo es el primero que creamos, que
+					puede ser styles.scss, estilos.scss, main.scss o
+					como le hayamos puesto.
+					<p>- Y dentro de el vamos a utilizar la propiedad
+					@import, que, vale la aclaración, no es de Sass,
+					sino que es propia de CSS.</p>
+					<p>- Y esta propiedad va a ir acompañada del
+					nombre del archivo que queremos importar,
+					entre comillas y sin la extensión.</p>
+				</section>
+			</div>
+			<div class="n">Nesting
+				<section class="expn">
+					<p>- El Nesting es una de las funciones más
+					interesantes, ya que nos va a ahorrar escribir
+					mucho código.
+					<p>- Específicamente, nos va a permitir anidar
+					nuestras reglas de CSS, evitando cosas como:</p>
+					<p>nav {...}
+					nav ul {...}
+					nav ul li {...}
+					nav ul li a {...}</p>	
+				</section>
+			</div>
+			<div class="e">Extend
+				<section class="expe">	
+					<p>- Los extend crear un estilo, sin aplicarlo a ningún elemento. Y luego hacer que todos los
+					elementos que queramos lo “hereden”, teniendo la posibilidad de agregar o pisar propiedades.
+					<p>- Un extend consta de dos partes:</p>
+					<p>- Por un lado tenemos el armado del estilo.</p>
+					<p>- Por el otro tenemos la aplicación del
+					mismo.></p>
+				</section>
+			</div>
+			<div class="m">Mixins
+				<section class="expm">
+					<p>- Los Mixins se crearon para ahorrarnos escribir cosas extremadamente aburridas. Por ejemplo, los prefijos de propietario.
+					<p>- Hace algunos años, la propiedad border-radius
+					no era soportada por todos los navegadores, y
+					debíamos hacer lo siguiente:</p>
+					<p>.caja {
+					-moz-border-radius: 20px;
+					-webkit-border-radius: 20px;
+					-ms-border-radius: 20px;
+					border-radius: 20px;
+					}</p>
+					<p>- Imaginen esto en una página que tiene todo con los bordes redondeados.</p>					
+				</section>
+			</div>
+			<div class="sit">Operadores
+				<section class="expsit">	
+					<p>- La utilización de operadores es
+					extremadamente simple, nos puede servir para
+					calcular un ancho, un alto o cualquier otro valor.
+					<p>- Los operadores soportados por Sass son: suma (+), resta (-), multiplicación (*) y división (/).</p>
+					<p>- Por ejemplo, podemos hacer:</p>
+					<p>- width: 700px / 250px * 3em;</p>
+					<p>- En honor a la verdad, el uso de operadores es prácticamente nulo. </p>
+				</section>
+			</div>	
+			<div class="exp">
+				
+								
+			</div>
+			<aside class="a1">
+				
+			</aside>
+			<aside class="a2">
+				
+			</aside>
+			<section class="footer">
+				<a href="https://sass-lang.com/" target="_blank">sass-lang.com</a>
+			</section>
+		</div>
+	</body>
+</html>
+
